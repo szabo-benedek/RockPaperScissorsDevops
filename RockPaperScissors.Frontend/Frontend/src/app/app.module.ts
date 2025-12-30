@@ -6,10 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideHttpClient } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PlayComponent } from './play/play.component';
+import { HistoryComponent } from './history/history.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PlayComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,

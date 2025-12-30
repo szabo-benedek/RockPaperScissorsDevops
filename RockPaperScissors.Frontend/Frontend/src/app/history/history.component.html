@@ -1,0 +1,43 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Game History</h2>
+        <button class="btn btn-danger" (click)="deleteAll()">
+          🗑️ Clear History
+        </button>
+      </div>
+
+      
+      <div *ngIf="(games$ | async)?.length === 0" class="alert alert-info">
+        No games played yet. Start playing to see your history!
+      </div>
+
+      
+      <div class="table-responsive" *ngIf="(games$ | async)?.length ?? 0 > 0">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Date & Time</th>
+              <th>Your Choice</th>
+              <th>Computer Choice</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let game of games$ | async">
+              <td>{{ game.playedAt | date:'short' }}</td>
+              <td>{{ game.playerChoice }}</td>
+              <td>{{ game.computerChoice }}</td>
+              <td>
+                <span class="badge" [ngClass]="getResultBadgeClass(game.result)">
+                  {{ game.result }}
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

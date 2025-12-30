@@ -1,0 +1,49 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h2 class="text-center mb-4">Rock Paper Scissors</h2>
+      
+      
+      <div class="d-flex justify-content-center gap-3 mb-4">
+        <button 
+          class="btn btn-primary btn-lg" 
+          (click)="play('Rock')" 
+          [disabled]="loading">
+          ✊ Rock
+        </button>
+        <button 
+          class="btn btn-success btn-lg" 
+          (click)="play('Paper')" 
+          [disabled]="loading">
+          ✋ Paper
+        </button>
+        <button 
+          class="btn btn-danger btn-lg" 
+          (click)="play('Scissors')" 
+          [disabled]="loading">
+          ✌️ Scissors
+        </button>
+      </div>
+
+      
+      <div *ngIf="loading" class="text-center">
+        <div class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+
+      
+      <div *ngIf="lastGame && !loading" class="card">
+        <div class="card-body text-center">
+          <h3 class="card-title" [ngClass]="getResultClass()">
+            {{ lastGame.result }}!
+          </h3>
+          <p class="card-text">
+            <strong>You chose:</strong> {{ lastGame.playerChoice }}<br>
+            <strong>Computer chose:</strong> {{ lastGame.computerChoice }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
