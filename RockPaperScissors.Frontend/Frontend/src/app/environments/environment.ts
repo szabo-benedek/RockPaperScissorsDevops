@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  backendUrl: 'http://localhost:5029'
+  backendUrl: 'https://api.rps-game.xyz'
 };
