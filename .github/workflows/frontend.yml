@@ -36,7 +36,7 @@ jobs:
             npm-${{ runner.os }}-
 
       - name: Install deps
-        run: npm ci
+        run: npm ci --legacy-peer-deps
         working-directory: ${{ env.APP_DIR }}
 
       - name: Override environment.ts (backendUrl)
