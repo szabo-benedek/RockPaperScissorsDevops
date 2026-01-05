@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      PROJECT_PATH: RockPaperScissors.Backend/RockPaperScissors.Backend.csproj
+      PROJECT_PATH: RockPaperScissors.Backend/RockPaperScissors.Backend/RockPaperScissors.Backend.csproj
       PUBLISH_DIR: publish
       RUNTIME: linux-x64
       SELF_CONTAINED: "true"
