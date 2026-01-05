@@ -41,7 +41,7 @@ jobs:
 
       - name: Override environment.ts (backendUrl)
         run: |
-          FILE="${{ env.APP_DIR }}/Frontend/src/app/environments/environment.ts"
+          FILE="${{ env.APP_DIR }}/src/app/environments/environment.ts"
           echo "Eredeti environment.ts tartalom:"
           cat "$FILE" || true
           echo
