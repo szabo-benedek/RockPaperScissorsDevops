@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      APP_DIR: RockPaperScissors.Frontend/RockPaperScissors.Frontend
-      DIST_DIR: RockPaperScissors.Frontend/RockPaperScissors.Frontend/dist/rock-paper-scissors.frontend/browser
+      APP_DIR: RockPaperScissors.Frontend
+      DIST_DIR: RockPaperScissors.Frontend/dist/frontend/browser
       REMOTE_BASE: /var/frontend
       REMOTE_RELEASES: /var/frontend/releases
       REMOTE_CURRENT: /var/frontend/current
